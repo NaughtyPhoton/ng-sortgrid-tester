@@ -1,10 +1,9 @@
 <div class='container'>
-  <div class='color-item' 
-    *ngFor="let color of colors" 
-    [ngStyle]="{'color': color}"
-    [ngSortGridItems]="colors"
+  <div class='thumbnail-container' 
+    *ngFor="let image of images"
+    [ngSortGridItems]="images"
     (sorted)="storeNewOrder($event)"
     ngSortgridItem>
-    <p>{{color}}</p>
+    <img src="{{image}}" class="thumbnail">
   </div>
 </div>
