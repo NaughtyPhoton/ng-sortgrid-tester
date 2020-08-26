@@ -1,0 +1,10 @@
+<div class='container'>
+  <div class='color-item' 
+    *ngFor="let color of colors" 
+    [ngStyle]="{'color': color}"
+    [ngSortGridItems]="colors"
+    (sorted)="storeNewOrder($event)"
+    ngSortgridItem>
+    <p>{{color}}</p>
+  </div>
+</div>
